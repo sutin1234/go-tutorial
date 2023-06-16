@@ -6,17 +6,25 @@ import (
 	"github.com/sutin1234/go-tutorial/hello"
 )
 
-func TestShouldVer_1_20_byDefault(t *testing.T) {
-	p := hello.GoParams{Name: "", Version: ""}
-	v := hello.GoVersion(p)
-	if v != "golang 1.20" {
-		t.Error("should be except golang 1.20 actual ", p.Name+p.Version)
+func TestVersion(t *testing.T) {
+
+	type testCases struct {
+		caseName string
+		params   hello.GoParams
+		expected string
 	}
-}
-func TestShouldVer_1_20_byInput(t *testing.T) {
-	p := hello.GoParams{Name: "golang", Version: "1.20"}
-	v := hello.GoVersion(p)
-	if v != p.Name+" "+p.Version {
-		t.Error("should be except golang 1.20 actual ", p.Name+p.Version)
+
+	cases := []testCases{
+		{caseName: "by_default", params: hello.GoParams{Name: "", Version: ""}, expected: "golang 1.20"},
+		{caseName: "by_input", params: hello.GoParams{Name: "golang", Version: "1.20"}, expected: "golang 1.20"},
+	}
+	for _, c := range cases {
+		t.Run(c.caseName, func(t *testing.T) {
+			p := c.params
+			v := hello.GoVersion(p)
+			if v != c.expected {
+				t.Errorf("should be except %v %v actual %v %v", p.Name, p.Version, p.Name, p.Version)
+			}
+		})
 	}
 }
