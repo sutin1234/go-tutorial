@@ -2,8 +2,10 @@
 
 build app with Go 2023
 
-install all package
+### install all package
+
 `$ go install`
 
-runing go with makeFile
+### runing go with makeFile
+
 `$ make run`
