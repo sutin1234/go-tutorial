@@ -25,4 +25,4 @@ jobs:
       run: go build -v ./...
 
     - name: Test Hello
-      run: go test hello/hello_test.go -v.
+      run: go test hello/hello_test.go -v
