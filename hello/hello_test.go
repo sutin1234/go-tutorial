@@ -13,7 +13,6 @@ func TestVersion(t *testing.T) {
 		params   hello.GoParams
 		expected string
 	}
-
 	cases := []testCases{
 		{caseName: "by_default", params: hello.GoParams{Name: "", Version: ""}, expected: "golang 1.20"},
 		{caseName: "by_input", params: hello.GoParams{Name: "golang", Version: "1.20"}, expected: "golang 1.20"},

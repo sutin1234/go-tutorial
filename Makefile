@@ -11,6 +11,9 @@ build:
 run:
 	go run main.go
 
+git_push:
+	git add . && git commit -m "update code" && git push 
+
 test_banana:
 	go test banana/banana_test.go -v
 
