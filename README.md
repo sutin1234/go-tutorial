@@ -2,6 +2,9 @@
 
 build app with Go 2023
 
+### setup MakeFile
+<a href="[http://example.com/](http://www.lungmaker.com/go-programming/makefile)" target="_blank">http://www.lungmaker.com/go-programming/makefile</a>
+
 ### install all package
 
 `$ go install`
