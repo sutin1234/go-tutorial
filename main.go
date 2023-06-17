@@ -10,16 +10,6 @@ import (
 func main() {
 	fmt.Println("hello", hello.SayHello("world"))
 
-	// Struct
-	p := hello.GoParams{Name: "", Version: ""}
-	fmt.Println(hello.GoVersion(p))
-
-	// // Date
-	// now := date.Now()
-	// cur := date.CurrentDate()
-	// fmt.Println(now)
-	// fmt.Println(cur)
-
 	// // DateFormat
 	// format_date := strings.ReplaceAll(cur, "-", "/")
 	// fmt.Println(date.DateFormat(format_date, "2006/01/02"))

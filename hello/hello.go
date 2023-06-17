@@ -1,17 +1,16 @@
 package hello
 
-import "fmt"
+import (
+	"fmt"
 
-type GoParams struct {
-	Name    string
-	Version string
-}
+	Struct "github.com/sutin1234/go-tutorial/struct"
+)
 
 func SayHello(name string) string {
 	return name
 }
 
-func GoVersion(p GoParams) string {
+func GoVersion(p Struct.GoParams) string {
 	if p.Name == "" {
 		p.Name = "golang"
 	}
