@@ -16,7 +16,7 @@ run:
 	go run main.go
 
 git_push:
-	git add . && git commit -m "update GOOS=js GOARCH=wasm" && git push
+	git add . && git commit -m "update settings.json" && git push
 
 test_banana:
 	go test banana/banana_test.go -v
