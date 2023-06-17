@@ -29,3 +29,6 @@ jobs:
 
     - name: Test Date
       run: go test date/date_test.go -v
+
+    - name: Test Banana
+      run: go test banana/banana_test.go -v
