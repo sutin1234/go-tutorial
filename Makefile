@@ -12,11 +12,17 @@ compile:
 build:
 	go build -o bin/main main.go
 
+docker_build:
+	docker build -t go-docker-demo .
+
+docker_deploy:
+	docker run -d --name go-docker-demo go-docker-demo
+
 run:
 	go run main.go
 
 git_push:
-	git add . && git commit -m "update settings.json" && git push
+	git add . && git commit -m "update deploy as docker" && git push
 
 test_banana:
 	go test banana/banana_test.go -v
