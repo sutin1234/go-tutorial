@@ -16,6 +16,7 @@ type TestCases struct {
 
 func TestVersion(t *testing.T) {
 	cases := []TestCases{
+		{caseName: "by_struct", params: Struct.GoParams{}, expected: "golang 1.20"},
 		{caseName: "by_default", params: Struct.GoParams{Name: "", Version: ""}, expected: "golang 1.20"},
 		{caseName: "by_input", params: Struct.GoParams{Name: "golang", Version: "1.20"}, expected: "golang 1.20"},
 	}

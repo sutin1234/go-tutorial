@@ -35,7 +35,7 @@ preview:
 	./bin/go-tutorial
 
 git_push:
-	git add . && git commit -m "update clean build path" && git push
+	git add . && git commit -m "update test_hello struct" && git push
 
 test_banana:
 	go test banana/banana_test.go -v
