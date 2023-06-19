@@ -16,12 +16,7 @@ tasks:
     desc: "Clean go application"
     cmds:
       - go clean
-      - rm bin/go-tutorial
-      - rm bin/go-tutorial-linux-386
-      - rm bin/go-tutorial-amd64-linux
-      - rm bin/go-tutorial-windows-386.exe
-      - rm bin/go-tutorial-amd64-darwin
-      - rm bin/go-tutorial-wasm.wasm
+      - rm -rf bin/*
     silent: true
 
   build:
