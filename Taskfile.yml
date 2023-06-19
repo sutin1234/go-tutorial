@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   compile:
@@ -20,61 +20,67 @@ tasks:
     silent: true
 
   build:
-      desc: "Build go application"
-      cmds:
-        - go build -o bin/go-tutorial main.go
-      silent: true
+    desc: "Build go application"
+    cmds:
+      - go build -o bin/go-tutorial main.go
+    silent: true
 
   docker_build:
-      desc: "Docker build go application"
-      cmds:
-        - docker build -t go-tutorial -f Dockerfile
-      silent: true
+    desc: "Docker build go application"
+    cmds:
+      - docker build -t go-tutorial -f Dockerfile
+    silent: true
 
   docker_run:
-      desc: "Run docker container go application"
-      cmds:
-        - docker run -d --name go-tutorial go-tutorial
-      silent: true
+    desc: "Run docker container go application"
+    cmds:
+      - docker run -d --name go-tutorial go-tutorial
+    silent: true
 
   run:
-      desc: "Run go application"
-      cmds:
-        - go run main.go
-      silent: true
+    desc: "Run go application"
+    cmds:
+      - go run main.go
+    silent: true
 
   preview:
-      desc: "Run go application"
-      cmds:
-        - ./bin/go-tutorial
-      silent: true
+    desc: "Run go application"
+    cmds:
+      - ./bin/go-tutorial
+    silent: true
 
   push:
-      desc: "git push go application"
-      cmds:
-        - git add . && git commit -m "update taskfile cmd" && git push
-      silent: true
+    desc: "git push go application"
+    cmds:
+      - git add . && git commit -m "update taskfile cmd" && git push
+    silent: true
 
   test_banana:
-      desc: "test banana go application"
-      cmds:
-        - go test banana/banana_test.go -v
-      silent: true
+    desc: "test banana go application"
+    cmds:
+      - go test banana/banana_test.go -v
+    silent: true
 
   test_hello:
-      desc: "test hello go application"
-      cmds:
-        - go test hello/hello_test.go -v
-      silent: true
+    desc: "test hello go application"
+    cmds:
+      - go test hello/hello_test.go -v
+    silent: true
 
   test_date:
-      desc: "test date go application"
-      cmds:
-        - go test date/date_test.go -v
-      silent: true
+    desc: "test date go application"
+    cmds:
+      - go test date/date_test.go -v
+    silent: true
+
+  test_spread:
+    desc: "test spread operator go application"
+    cmds:
+      - go test operators/spread/spread_test.go -v
+    silent: true
 
   test_all:
-      desc: "test all cases go application"
-      cmds:
-        - go test ./... -v
-      silent: true
+    desc: "test all cases go application"
+    cmds:
+      - go test ./... -v
+    silent: true

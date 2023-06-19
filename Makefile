@@ -46,5 +46,8 @@ test_hello:
 test_date:
 	go test date/date_test.go -v
 
+test_spread:
+	go test operators/spread/spread_test.go -v
+
 test_all:
 	go test ./... -v
