@@ -11,20 +11,16 @@ build app with Go 2023
 `$ go install [package]`
 `$ go get [package]`
 
-### running main.go
-
+run main.go
 `$ make run`
 
-### build go
-
+build go
 `$ make build`
 
-### compile go all platform
-
+compile go all platform
 `$ make complie`
 
-### testing go all test suit
-
+testing go all test suit
 `$ make test_all`
 
 ## Using Taskfile
@@ -33,12 +29,24 @@ build app with Go 2023
 
 ### installation
 
-Brew
+brew
 `$ brew install go-task/tap/go-task`
 `$ go install github.com/go-task/task/v3/cmd/task@latest`
 
-Snap
+snap
 `$ sudo snap install task --classic`
 
-Chocolatey
+chocolatey
 `$ choco install go-task`
+
+run main.go
+`$ task run`
+
+build go
+`$ task build`
+
+compile go all platform
+`$ task complie`
+
+testing go all test suit
+`$ task test_all`
