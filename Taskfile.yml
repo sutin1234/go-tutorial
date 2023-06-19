@@ -57,7 +57,7 @@ tasks:
   push:
       desc: "git push go application"
       cmds:
-        - git add . && git commit -m "update test_hello struct" && git push
+        - git add . && git commit -m "update taskfile cmd" && git push
       silent: true
 
   test_banana:
