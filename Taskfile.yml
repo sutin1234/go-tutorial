@@ -7,7 +7,7 @@ tasks:
       - GOOS=linux GOARCH=386 go build -o bin/go-tutorial-linux-386 main.go
       - GOOS=linux GOARCH=amd64 go build -o bin/go-tutorial-amd64-linux main.go
       - GOOS=windows GOARCH=386 go build -o bin/go-tutorial-windows-386.exe main.go
-      - GOOS=windows GOARCH=amd64 go build -o bin/go-tutorial-indows-amd64.exe main.go
+      - GOOS=windows GOARCH=amd64 go build -o bin/go-tutorial-windows-amd64.exe main.go
       - GOOS=darwin GOARCH=amd64 go build -o bin/go-tutorial-amd64-darwin main.go
       - GOOS=js GOARCH=wasm go build -o bin/go-tutorial-wasm.wasm main.go
     silent: true
