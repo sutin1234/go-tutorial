@@ -23,6 +23,9 @@ compile go all platform
 testing go all test suit
 `$ make test_all`
 
+linting
+`$ make lint`
+
 ## Using Taskfile
 
 [https://taskfile.dev/installation](https://taskfile.dev/installation)
@@ -50,3 +53,6 @@ compile go all platform
 
 testing go all test suit
 `$ task test_all`
+
+linting
+`$ task lint`
