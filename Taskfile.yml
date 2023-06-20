@@ -52,7 +52,7 @@ tasks:
   push:
     desc: "git push go application"
     cmds:
-      - git add . && git commit -m "update spread operatoror" && git push
+      - git add . && git commit -m "update golangci-lint" && git push
     silent: true
 
   test_banana:
