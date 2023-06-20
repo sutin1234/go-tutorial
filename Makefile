@@ -51,3 +51,6 @@ test_spread:
 
 test_all:
 	go test ./... -v
+
+lint:
+	golangci-lint run --fix --fast .

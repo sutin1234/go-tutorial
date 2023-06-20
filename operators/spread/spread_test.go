@@ -1,7 +1,6 @@
 package operattors_test
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -22,7 +21,6 @@ func TestSumSpread(t *testing.T){
 		{caseName: "case_3", input: []int{1,2,3,2,5}, expected: 13},
 	}
 	for _, c := range cases {
-		fmt.Printf("caseName: %v input: %v expexted: %v\n\n", c.caseName, c.input, c.expected)
 		t.Run(c.caseName, func(t *testing.T) {
 			v := operattors.Sum(c.input...)
 			if v != c.expected {

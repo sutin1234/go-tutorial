@@ -84,3 +84,9 @@ tasks:
     cmds:
       - go test ./... -v
     silent: true
+
+  lint:
+    desc: "linting go application"
+    cmds:
+      - golangci-lint run --fix --fast .
+    silent: true
