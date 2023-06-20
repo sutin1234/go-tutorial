@@ -5,30 +5,32 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Go
-      uses: actions/setup-go@v3
-      with:
-        go-version: 1.19
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
 
-    - name: Build
-      run: go build -v ./...
+      - name: Linting
+        run: golangci-lint run --fix --fast .
 
-    - name: Test Hello
-      run: go test hello/hello_test.go -v
+      - name: Build
+        run: go build -v ./...
 
-    - name: Test Date
-      run: go test date/date_test.go -v
+      - name: Test Hello
+        run: go test hello/hello_test.go -v
 
-    - name: Test Banana
-      run: go test banana/banana_test.go -v
+      - name: Test Date
+        run: go test date/date_test.go -v
+
+      - name: Test Banana
+        run: go test banana/banana_test.go -v
