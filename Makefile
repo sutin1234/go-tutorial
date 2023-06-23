@@ -54,3 +54,6 @@ test_all:
 
 lint:
 	golangci-lint run --fix --fast .
+
+download:
+	go mod downloads

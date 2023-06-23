@@ -90,3 +90,9 @@ tasks:
     cmds:
       - golangci-lint run --fix --fast .
     silent: true
+
+  download:
+    desc: "download dept in from go.mod"
+    cmds:
+      - go mod download
+    silent: true
